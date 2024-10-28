@@ -21,6 +21,9 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "src/files/loader/main.tsx",
+    "src/files/css/index.css",
+    "src/files/img.jpg"
   ]
 }
