@@ -6,9 +6,13 @@ console.log()
 document.addEventListener("DOMContentLoaded" , load)
 function App() {
   return (
-      <div className={"title"}>
-          <img src={img} />
+      <div>
+        <img className={"back"} />
+        <div className={"title"}>
+          <img src={img}/>
           <p className={"testfont"}>Hello world</p>
+            <progress value={90} max={100}></progress>
+        </div>
       </div>
   );
 }
