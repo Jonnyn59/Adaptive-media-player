@@ -1,3 +1,3 @@
 export function build(){
-    console.log("build started")
+    console.log("....>/")
 }

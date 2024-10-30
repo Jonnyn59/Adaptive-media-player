@@ -56,8 +56,37 @@ img {
     box-shadow: 0 0 40px gray;
     background-color: #282c34;
 }
+.tro , .too {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #282c34;
+}
 body {
     background-color: #282c34;
+    overflow: hidden;
+}
+.bi-play {
+    position: absolute;
+    top: 67.5%;
+    left: 50%;
+    transition: 0.5s opacity ease-in-out;
+    transform: translate(-50%,0%);
+    opacity: 1;
+}
+.bi-pause {
+    position: absolute;
+    top: 67.5%;
+    left: 50%;
+    transition: 0.5s opacity ease-in-out;
+    transform: translate(-50%,0%);
+    opacity: 0;
+}
+.hidden {
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
 }
 .back {
     width: 100vw;

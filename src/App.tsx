@@ -1,23 +1,22 @@
 import React from 'react';
 import {load} from "./files/loader/main";
 import img from "./files/img.jpg"
-console.log()
-
 document.addEventListener("DOMContentLoaded" , load)
 function App() {
   return (
-      <div>
-        <img className={"back"} />
+      <div id={"page"}>
+          <img className={"back"}/>
           <div className={"title"}>
               <img src={img}/>
               <p className={"testfont"}>Hello world</p>
-              <progress value={90} max={100}></progress>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-play"
+              <progress value={20} max={100}></progress>
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" id={"playbtn"} height="64" fill="white"
+                   className="bi bi-play"
                    viewBox="0 0 16 16">
                   <path
                       d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-pause"
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white" className="bi bi-pause"
                    viewBox="0 0 16 16">
                   <path
                       d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
@@ -48,7 +47,8 @@ function App() {
                       d="M14.804 8 9 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
               </svg>
           </div>
-          <div className={"bi-menu-button"} ></div>
+          <div className={"bi-menu-button"}></div>
+          <div id={"too"}></div>
       </div>
   );
 }
