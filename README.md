@@ -11,3 +11,9 @@
 - in the near future it is planned to add an account system thanks to Yandex ID and connect the API to receive all songs.
 - the native version of the project is being prepared
 - made and designed by one person
+
+
+###
+```js
+console.log("test");
+```
