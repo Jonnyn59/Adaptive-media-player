@@ -6,7 +6,7 @@
     --imghei : calc( ( 100vh / 1.5 ) / 2.4);
     --imgwit : calc( ( 100vw / 3 ) / 2 );
 }
-@media screen and (device-width < 1280px) {
+@media screen and (device-width < 720px) {
     :root {
         --wit: calc( 100vw / 1.05 );
         --height: calc( 100vh / 1.25 );

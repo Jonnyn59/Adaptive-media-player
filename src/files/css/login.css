@@ -1,0 +1,24 @@
+:root {
+    --wit_hei : calc(100vw / 3)
+}
+
+@media screen and (device-width < 720px) {
+    :root {
+    --wit_hei: calc(100vw / 1.5);
+}
+}
+
+body {
+    background-color: #282c34;
+}
+#logpage {
+    position: absolute;
+    width: var(--wit_hei);
+    background-color: black;
+    height: var(--wit_hei);
+    border-radius: var(--border);
+    border: 1px solid gray;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

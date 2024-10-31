@@ -1,7 +1,23 @@
 import React from 'react';
-import {load} from "./files/loader/main";
 import img from "./files/img.jpg"
-document.addEventListener("DOMContentLoaded" , load)
+import './files/css/index.css'
+import Login from "./Login";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+);
+
+function loginp(){
+    root.render(
+        // <React.StrictMode>
+        //     <Login />
+        // </React.StrictMode>
+        <React.Fragment>
+            <Login />
+        </React.Fragment>
+    )
+}
 function App() {
   return (
       <div id={"page"}>
@@ -49,8 +65,8 @@ function App() {
           </div>
           <div className={"bi-menu-button"}></div>
           <div id={"too"}></div>
+          <button id={"AccountLogin"} onClick={loginp} >Login</button>
       </div>
   );
 }
-
 export default App;
