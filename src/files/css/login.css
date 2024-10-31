@@ -14,11 +14,225 @@ body {
 #logpage {
     position: absolute;
     width: var(--wit_hei);
-    background-color: black;
+    background-color: transparent;
     height: var(--wit_hei);
     border-radius: var(--border);
     border: 1px solid gray;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    box-shadow: 0 0 10000px #212121;
+    -webkit-box-shadow: 0 0 10000px #212121;
+    -moz-box-shadow: 0 0 10000px #212121;
+    -o-box-shadow: 0 0 10000px #212121;
+}
+
+.inputBox {
+    position: relative;
+}
+
+.inputBox input {
+    padding: 15px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid#ee8456;
+    font-size: 1em;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 15px 20px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    color: #ee8456;
+    letter-spacing: 0.1em;
+}
+
+.llogPos {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-200%);
+
+}
+.ppassPos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+    font-size: 0.7em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+}
+button {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    position: relative;
+    font-size: 17px;
+    background: #333;
+    border: none;
+    color: #fff;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,0%);
+}
+
+button:hover {
+    letter-spacing: 0.25em;
+    background: #ee8456;
+    color: #ee8456;
+    box-shadow: 0 0 45px #ee8456;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222222;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+button i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #ee8456;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+button:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+button i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #ee8456;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #222222;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+button:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+/* From Uiverse.io by Nawsome */
+.clear {
+    clear: both;
+}
+
+.checkBox {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 2px #fff;
+}
+
+.checkBox div {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    top: -52px;
+    left: -52px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    z-index: 100;
+}
+
+.checkBox input[type=checkbox]:checked + div {
+    left: -10px;
+    top: -10px;
+    background-image: linear-gradient(rgb());
+}
+
+.checkBox input[type=checkbox] {
+    position: absolute;
+    left: 50px;
+    visibility: hidden;
+}
+.transition {
+    transition: 300ms ease;
+}
+
+.customTestDiv {
+    position: relative;
+}
+.customTestDiv .customTest {
+    background-color: transparent;
+
+    animation: testAnim 10s ease infinite;
+}
+.customTest::placeholder {
+
+    animation: testAnim 10s ease infinite;
+}
+.customTestDiv span {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    animation: testAnim 10s ease infinite;
+    background-color: transparent;
+    left: 15%;
+    top: 7.5%;
+    content: "";
+}
+
+@keyframes testAnim {
+    0% {
+        content: "_";
+    }
+    20% {
+        content: "L_";
+    }
+    40% {
+        content: "LO_";
+    }
+    60% {
+        content: "LOG_";
+    }
+    80% {
+        content: "LOGI_";
+    }
+    100% {
+        content: "LOGIN_";
+    }
 }

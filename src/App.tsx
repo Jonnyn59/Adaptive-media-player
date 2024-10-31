@@ -13,9 +13,9 @@ function loginp(){
         // <React.StrictMode>
         //     <Login />
         // </React.StrictMode>
-        <React.Fragment>
+        <React.StrictMode>
             <Login />
-        </React.Fragment>
+        </React.StrictMode>
     )
 }
 function App() {
