@@ -3,17 +3,19 @@
     --wit : calc(100vw / 3);
     --font : calc((100vw / 300) *  5);
     --border : calc((100vw / 300) * 2.5);
-    --imghei : calc( ( 100vh / 1.5 ) / 2.4);
-    --imgwit : calc( ( 100vw / 3 ) / 2 );
+    --imghei : calc( ( 100vh / 1.5 ) / 1.4);
+    --imgwit : calc( ( 100vw / 3 ) / 1.25 );
+    --pro : 45vh
 }
-@media screen and (device-width < 1280px) {
+@media screen and (device-width < 1080px) {
     :root {
         --wit: calc( 100vw / 1.05 );
+        --pro : calc(100vw / 1.5);
         --height: calc( 100vh / 1.25 );
         --font: calc( (100vw / 20) * 1 );
         --border: calc( (100vw / 150) * 5 );
-        --imgwit: calc( (100vw / 6) );
-        --imghei: calc( (100vh / 3) / 1.2 );
+        --imgwit: calc( (100vw / 1.25) );
+        --imghei: calc( (100vh / 2) / 1.2 );
     }
 }
 /*
@@ -36,8 +38,8 @@ border : 20px
     transform: translate(-50%,0%);
 }
 img {
-    width: 50vh;
-    height: 50vh;
+    width: var(--imgwit);
+    height: var(--imghei);
     position: absolute;
     left: 50%;
     transform: translate(-50%,6.75%);
@@ -98,8 +100,8 @@ body {
 }
 progress {
     position: absolute;
-    width: 45vh;
-    height: 1vh;
+    width: var(--pro);
+    height: calc(100vh/100);
     left: 50%;
     transform: translate(-50%,0%);
     top: 65%;
