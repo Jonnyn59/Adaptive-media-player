@@ -1,7 +1,7 @@
 import React from 'react';
-import {load} from "./files/loader/main";
-import img from "./files/img.jpg"
-document.addEventListener("DOMContentLoaded" , load)
+import './files/css/index.css'
+import img from "./files/img.jpg";
+
 function App() {
   return (
       <div id={"page"}>
@@ -48,7 +48,6 @@ function App() {
               </svg>
           </div>
           <div className={"bi-menu-button"}></div>
-          <div id={"too"}></div>
       </div>
   );
 }

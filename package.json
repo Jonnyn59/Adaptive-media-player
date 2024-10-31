@@ -14,8 +14,10 @@
     "radio-browser": "^2.2.3",
     "react": "^18.3.1",
     "react-bootstrap-icons": "^1.11.4",
+    "react-color-extractor": "^1.1.2",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
+    "react-linear-gradient-picker": "^3.0.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "use-sound": "^4.0.3",
@@ -45,5 +47,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- тг : @Jonnyn59 - сделано менее чем за неделю - в ближайшее время планируется добавить систему аккаунтов благодаря Yandex ID и подключить API дляполучения всех песен . - готовится нативная версия проекта - сделана и спроектирована одним человеком ## EN : - tg : @Jonnyn59 - done in less than a week - in the near future it is planned to add an account system thanks to Yandex ID and connect the API to receive all songs. - the native version of the project is being prepared - made and designed by one person",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
