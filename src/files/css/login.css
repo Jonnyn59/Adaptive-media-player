@@ -8,6 +8,12 @@
 }
 }
 
+@keyframes Corner {
+    from {
+        background-image: linear-gradient(0deg , rgba(70,70,70,0.75)25% , rgba(140,140,140,0.5)100%);
+    }
+}
+
 body {
     background-color: #282c34;
 }
@@ -25,6 +31,11 @@ body {
     -webkit-box-shadow: 0 0 10000px #212121;
     -moz-box-shadow: 0 0 10000px #212121;
     -o-box-shadow: 0 0 10000px #212121;
+    transition: 0.5s all ease;
+    animation: Corner 2.5s infinite;
+}
+#logpage:corner-present {
+    background-color: white;
 }
 
 .inputBox {
@@ -194,45 +205,48 @@ button:hover i::after {
 }
 
 .customTestDiv {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(100vw / 8);
+    height: 50px;
+    transform: translate(-50%,-150%);
 }
 .customTestDiv .customTest {
+    position: absolute;
     background-color: transparent;
-
-    animation: testAnim 10s ease infinite;
-}
-.customTest::placeholder {
-
-    animation: testAnim 10s ease infinite;
+    border: 0.1vh solid darkorange;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
 }
 .customTestDiv span {
     position: absolute;
-    z-index: 1;
-    color: white;
-    animation: testAnim 10s ease infinite;
-    background-color: transparent;
-    left: 15%;
-    top: 7.5%;
-    content: "";
+    left: 2.5vw;
+    top: 50%;
+    transform: translate(-25%,-35%);
+    pointer-events: none;
+    font-family: monospace;
+    color: darkorange;
+    letter-spacing: 10px;
+    font-weight: lighter;
+    transition: 0.5s all ease;
+    border: 1vh solid #282c34;
+    font-size: 16px;
+    
 }
+.customTestDiv .customTest:focus ~ span {
+    outline: 0px;
+    transform: translateY(-125%) translateX(-50%);
+    background-color: #282c34;
+    letter-spacing: 0;
+    border: 1vh solid #282c34;
+    border-radius: 1vh;
+    transition: 0.5s all ease;
+    outline: 1px solid darkorange;
+    outline-offset: 0.1vh;
 
-@keyframes testAnim {
-    0% {
-        content: "_";
-    }
-    20% {
-        content: "L_";
-    }
-    40% {
-        content: "LO_";
-    }
-    60% {
-        content: "LOG_";
-    }
-    80% {
-        content: "LOGI_";
-    }
-    100% {
-        content: "LOGIN_";
-    }
+}
+.customTestDiv .customTest:focus {
+    outline: 0px;
 }
