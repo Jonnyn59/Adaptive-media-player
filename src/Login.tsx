@@ -1,8 +1,5 @@
 import React from 'react';
 import './files/css/login.css'
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
 function Login() {
     return (
         <div id={"logpage"}>

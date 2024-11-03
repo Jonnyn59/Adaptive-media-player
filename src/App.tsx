@@ -3,11 +3,9 @@ import img from "./files/img.jpg"
 import './files/css/index.css'
 import Login from "./Login";
 import ReactDOM from "react-dom/client";
-
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
-
 function loginp(){
     root.render(
         // <React.StrictMode>
@@ -66,6 +64,7 @@ function App() {
           <div className={"bi-menu-button"}></div>
           <div id={"too"}></div>
           <button id={"AccountLogin"} onClick={loginp} >Login</button>
+          <audio src="https://zaycev.net/pages/248800/24880076.shtml" controls></audio>
       </div>
   );
 }
