@@ -1,5 +1,32 @@
 :root {
-    --wit_hei : calc(100vw / 3)
+    --wit_hei : calc(100vw / 3);
+    --border-radius: 10px;
+    --box-shadow-color: #212121;
+    --box-shadow-size: 10000px;
+    --button-color: #333;
+    --button-hover-color: #ee8456;
+    --button-text-color: #fff;
+    --button-hover-text-color: #ee8456;
+    --input-box-color: #ee8456;
+    --input-box-background-color: transparent;
+    --input-box-border-radius: 5px;
+    --input-box-font-size: 1em;
+    --input-box-padding: 15px 20px;
+    --input-box-span-color: #ee8456;
+    --input-box-span-font-size: 1em;
+    --input-box-span-letter-spacing: 0.1em;
+    --input-box-span-padding: 15px 20px;
+    --input-box-span-transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    --custom-test-div-width: calc(100vw / 8);
+    --custom-test-div-height: 50px;
+    --custom-test-div-transform: translate(-50%,-150%);
+    --custom-test-div-span-color: darkorange;
+    --custom-test-div-span-font-size: 16px;
+    --custom-test-div-span-font-family: monospace;
+    --custom-test-div-span-letter-spacing: 10px;
+    --custom-test-div-span-font-weight: lighter;
+    --custom-test-div-span-transition: 0.5s all ease;
+    --custom-test-div-span-border: 1vh solid #282c34;
 }
 
 @media screen and (device-width < 720px) {
@@ -20,23 +47,25 @@
 body {
     background-color: #282c34;
 }
+
 #logpage {
     position: absolute;
     width: var(--wit_hei);
     background-color: transparent;
     height: var(--wit_hei);
-    border-radius: var(--border);
+    border-radius: var(--border-radius);
     border: 1px solid gray;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    box-shadow: 0 0 10000px #212121;
-    -webkit-box-shadow: 0 0 10000px #212121;
-    -moz-box-shadow: 0 0 10000px #212121;
-    -o-box-shadow: 0 0 10000px #212121;
+    box-shadow: 0 0 var(--box-shadow-size) var(--box-shadow-color);
+    -webkit-box-shadow: 0 0 var(--box-shadow-size) var(--box-shadow-color);
+    -moz-box-shadow: 0 0 var(--box-shadow-size) var(--box-shadow-color);
+    -o-box-shadow: 0 0 var(--box-shadow-size) var(--box-shadow-color);
     transition: 0.5s all ease;
     animation: Corner 2.5s infinite;
 }
+
 #logpage:corner-present {
     background-color: white;
 }
@@ -46,24 +75,24 @@ body {
 }
 
 .inputBox input {
-    padding: 15px 20px;
+    padding: var(--input-box-padding);
     outline: none;
-    background: transparent;
-    border-radius: 5px;
-    color: #fff;
-    border: 1px solid#ee8456;
-    font-size: 1em;
+    background: var(--input-box-background-color);
+    border-radius: var(--input-box-border-radius);
+    color: var(--button-text-color);
+    border: 1px solid var(--input-box-color);
+    font-size: var(--input-box-font-size);
 }
 
 .inputBox span {
     position: absolute;
     left: 0;
-    padding: 15px 20px;
+    padding: var(--input-box-span-padding);
     pointer-events: none;
-    font-size: 1em;
-    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
-    color: #ee8456;
-    letter-spacing: 0.1em;
+    font-size: var(--input-box-span-font-size);
+    transition: var(--input-box-span-transition);
+    color: var(--input-box-span-color);
+    letter-spacing: var(--input-box-span-letter-spacing);
 }
 
 .llogPos {
@@ -71,14 +100,15 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-200%);
-
 }
+
 .ppassPos {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .inputBox input:focus ~ span,
 .inputBox input:valid ~ span {
     font-size: 0.7em;
@@ -86,8 +116,9 @@ body {
     padding: 0 5px;
     border-radius: 2px;
     background: #212121;
-    border: 1px solid #ee8456;
+    border: 1px solid var(--input-box-color);
 }
+
 button {
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -95,9 +126,9 @@ button {
     transition: 0.5s;
     position: relative;
     font-size: 17px;
-    background: #333;
+    background: var(--button-color);
     border: none;
-    color: #fff;
+    color: var(--button-text-color);
     left: 50%;
     top: 60%;
     transform: translate(-50%,0%);
@@ -105,9 +136,9 @@ button {
 
 button:hover {
     letter-spacing: 0.25em;
-    background: #ee8456;
-    color: #ee8456;
-    box-shadow: 0 0 45px #ee8456;
+    background: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+    box-shadow: 0 0 45px var(--button-hover-color);
 }
 
 button::before {
@@ -131,7 +162,7 @@ button i {
 button i::before {
     content: '';
     position: absolute;
-    border: 2px solid #ee8456;
+    border: 2px solid var(--button-hover-color);
     width: 7px;
     height: 4px;
     top: -3.5px;
@@ -149,7 +180,7 @@ button:hover i::before {
 button i::after {
     content: '';
     position: absolute;
-    border: 2px solid #ee8456;
+    border: 2px solid var(--button-hover-color);
     width: 7px;
     height: 4px;
     bottom: -3.5px;
@@ -163,43 +194,16 @@ button:hover i::after {
     width: 20px;
     left: 80%;
 }
-/* From Uiverse.io by Nawsome */
-.clear {
-    clear: both;
-}
 
-.checkBox div {
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    top: -52px;
-    left: -52px;
-    position: absolute;
-    transform: rotateZ(45deg);
-    z-index: 100;
-}
-
-.checkBox input[type=checkbox]:checked + div {
-    left: -10px;
-    top: -10px;
-}
-
-.checkBox input[type=checkbox] {
-    position: absolute;
-    left: 50px;
-    visibility: hidden;
-}
-.transition {
-    transition: 300ms ease;
-}
 .customTestDiv {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: calc(100vw / 8);
-    height: 50px;
-    transform: translate(-50%,-150%);
+    width: var(--custom-test-div-width);
+    height: var(--custom-test-div-height);
+    transform: var(--custom-test-div-transform);
 }
+
 .customTestDiv .customTest {
     position: absolute;
     background-color: transparent;
@@ -208,33 +212,34 @@ button:hover i::after {
     width: 100%;
     height: 100%;
 }
+
 .customTestDiv span {
     position: absolute;
     left: 2.5vw;
     top: 50%;
     transform: translate(-25%,-35%);
     pointer-events: none;
-    font-family: monospace;
-    color: darkorange;
-    letter-spacing: 10px;
-    font-weight: lighter;
-    transition: 0.5s all ease;
-    border: 1vh solid #282c34;
-    font-size: 16px;
-    
+    font-family: var(--custom-test-div-span-font-family);
+    color: var(--custom-test-div-span-color);
+    letter-spacing: var(--custom-test-div-span-letter-spacing);
+    font-weight: var(--custom-test-div-span-font-weight);
+    transition: var(--custom-test-div-span-transition);
+    border: var(--custom-test-div-span-border);
+    font-size: var(--custom-test-div-span-font-size);
 }
+
 .customTestDiv .customTest:focus ~ span {
     outline: 0;
     transform: translateY(-125%) translateX(-50%);
     background-color: #282c34;
     letter-spacing: 0;
-    border: 1vh solid #282c34;
+    border: var(--custom-test-div-span-border);
     border-radius: 1vh;
-    transition: 0.5s all ease;
+    transition: var(--custom-test-div-span-transition);
     outline: 1px solid darkorange;
     outline-offset: 0.1vh;
-
 }
+
 .customTestDiv .customTest:focus {
     outline: 0px;
 }

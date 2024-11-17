@@ -5,7 +5,19 @@
     --border : calc((100vw / 300) * 2.5);
     --imghei : calc( ( 100vh / 1.5 ) / 2.4);
     --imgwit : calc( ( 100vw / 3 ) / 2 );
+    --img-size: 50vh;
+    --progress-height: 1vh;
+    --progress-width: 45vh;
+    --progress-top: 65%;
+    --progress-border-radius: var(--border);
+    --progress-background-color: white;
+    --progress-border: 0px;
+    --progress-outline: solid 0.25px black;
+    --progress-outline-offset: 0.5vh;
+    --primary-color: #282c34;
+    --secondary-color: white;
 }
+
 @media screen and (device-width < 720px) {
     :root {
         --wit: calc( 100vw / 1.05 );
@@ -16,34 +28,29 @@
         --imghei: calc( (100vh / 3) / 1.2 );
     }
 }
-/*
--------------------Планировка---------------------------------------------------------------------
-height : 1080 / 1.5 ( 720px )
-with : 1920 / 3 ( 640px )
-font : 36px
-border : 20px
---------------------------------------------------------------------------------------------------
-*/
+
 .testfont {
     position: absolute;
     font-size: var(--font);
     text-align: center;
     font-family: monospace;
-    color: white;
+    color: var(--secondary-color);
     opacity: 1;
     top: 55%;
     left: 50%;
     transform: translate(-50%,0%);
 }
+
 img {
-    width: 50vh;
-    height: 50vh;
+    width: var(--img-size);
+    height: var(--img-size);
     position: absolute;
     left: 50%;
     transform: translate(-50%,6.75%);
     border-radius: var(--border);
     pointer-events: none;
 }
+
 .title {
     position: absolute;
     border-radius: var(--border);
@@ -54,20 +61,23 @@ img {
     top: 50vh;
     transform: translate(-50%,-35%);
     box-shadow: 0 0 40px gray;
-    background-color: #282c34;
+    background-color: var(--primary-color);
 }
-.tro , .too {
+
+.tro, .too {
     position: absolute;
     left: 0;
     top: 0;
     width: 200px;
     height: 200px;
-    background-color: #282c34;
+    background-color: var(--primary-color);
 }
+
 body {
-    background-color: #282c34;
+    background-color: var(--primary-color);
     overflow: hidden;
 }
+
 .bi-play {
     position: absolute;
     top: 67.5%;
@@ -76,6 +86,7 @@ body {
     transform: translate(-50%,0%);
     opacity: 1;
 }
+
 .bi-pause {
     position: absolute;
     top: 67.5%;
@@ -84,10 +95,12 @@ body {
     transform: translate(-50%,0%);
     opacity: 0;
 }
+
 .hidden {
     opacity: 0;
     transition: 0.5s all ease-in-out;
 }
+
 .back {
     width: 100vw;
     height: 90vh;
@@ -96,25 +109,27 @@ body {
     background-repeat: no-repeat;
     filter: blur(5vw);
 }
+
 progress {
     position: absolute;
-    width: 45vh;
-    height: 1vh;
+    width: var(--progress-width);
+    height: var(--progress-height);
     left: 50%;
     transform: translate(-50%,0%);
-    top: 65%;
-    border-radius: var(--border);
-    background-color: white;
-    border: 0px;
+    top: var(--progress-top);
+    border-radius: var(--progress-border-radius);
+    background-color: var(--progress-background-color);
+    border: var(--progress-border);
     background-color: rgba(0,0,0,0);
-    outline: solid 0.25px black;
-    outline-offset: 0.5vh;
+    outline: var(--progress-outline);
+    outline-offset: var(--progress-outline-offset);
 }
+
 progress::-webkit-progress-bar {
     background-color: rgba(0,0,0,0);
 }
+
 progress::-webkit-progress-value {
-    background-color: white;
-    /*box-shadow: 0 0 20px white;*/
-    border-radius: var(--border);
+    background-color: var(--progress-background-color);
+    border-radius: var(--progress-border-radius);
 }

@@ -1,3 +1,3 @@
-export function build(){
-    console.log("....>/")
+export function build(): void {
+    console.log("Building...");
 }
